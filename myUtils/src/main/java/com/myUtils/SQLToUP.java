@@ -1,23 +1,21 @@
 package com.myUtils;
 
+import com.sun.org.apache.xpath.internal.objects.XString;
+
 import java.util.List;
 
 public class SQLToUP {
-    static final String path = "..\\resource\\SQLToUP_SYMBOLS.txt";
-    private static StringBuilder[] symbols;
-    public static void main(String[] args) {
-        //String path = "d:\\Users\\songxq\\Desktop\\workspace\\idea\\songxianqi\\myUtils\\src\\main\\resource\\SQLToUP_SYMBOLS.txt";
+    static final  String localPath = System.getProperty("user.dir");
+    static final String path = localPath + "\\myUtils\\src\\main\\resource\\SQLToUP_SYMBOLS.txt";
+
+    public String HandlerSQL(String sql){
         List<String> list = new readFiles().readFile(path);
-        list.stream().forEach(s -> s.toLowerCase());
-        System.out.println(list);
-        for (Object o : list) {
-            System.out.println(o);
+        sql = sql.toLowerCase();
+        for (String s : list) {
+            s = s.toLowerCase();
+            sql = sql.replace(s,s.toUpperCase());
         }
-
-    }
-
-    public void HandlerSQL(String sql){
-
+        return sql;
     }
 
 }
