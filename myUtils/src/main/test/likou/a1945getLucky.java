@@ -1,7 +1,5 @@
 package likou;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 public class a1945getLucky {
 
     public static int getLucky(String s, int k) {

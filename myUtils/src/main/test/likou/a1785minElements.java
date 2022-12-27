@@ -1,9 +1,5 @@
 package likou;
 
-import org.omg.CORBA.MARSHAL;
-
-import java.util.Arrays;
-
 public class a1785minElements {
     public static int minElements(int[] nums, int limit, int goal) {
         long n = 0;
