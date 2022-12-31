@@ -2,7 +2,7 @@ package song_test;
 
 public class test08_monekySort {
     public static void main(String[] args) {
-        int[] nums = {3,1,2,2000,5};
+        int[] nums = {3,1,2,20,5};
         for (int num : nums) {
             fun(num);
         }
@@ -23,7 +23,7 @@ public class test08_monekySort {
         @Override
        public void run(){
             try {
-                Thread.sleep(num);
+                Thread.sleep(num*100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
