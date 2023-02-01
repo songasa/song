@@ -1,10 +1,19 @@
 package song_test;
 
+import java.util.StringJoiner;
+
 public class test17 {
     public static void main(String[] args) {
-        int a = 3;
-        int b = (++a) + (a++) + (a * 10);
-        System.out.println(a);
-        System.out.println(b);
+//
+        StringBuilder sb = new StringBuilder("a").append("b");
+
+        StringJoiner sj = new StringJoiner(",中间","开头[","]结尾");
+
+        sj.add("a");
+        sj.add("a12");
+        sj.add("a12");
+        sj.add("a12");
+        sj.add("a12");
+        System.out.println(sj);
     }
 }

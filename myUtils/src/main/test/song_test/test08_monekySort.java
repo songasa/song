@@ -23,7 +23,7 @@ public class test08_monekySort {
         @Override
        public void run(){
             try {
-                Thread.sleep(num*100);
+                Thread.sleep(num);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
